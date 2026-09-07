@@ -1,7 +1,7 @@
 {
   "name": "Maham & Muzammil Engagement",
   "short_name": "Maham & Muzammil",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#d4af37",
