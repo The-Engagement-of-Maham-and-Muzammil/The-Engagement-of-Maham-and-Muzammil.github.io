@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4af37">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="icon-192.png">
+<title>Maham & Muzammil Engagement</title>
+<style>
+
+/* =========================================================
+   LUXURY ENGAGEMENT ALBUM
+   ========================================================= */
+
+:root {
+  --cream: #f8f2e8;
+  --ivory: #fffdf8;
+  --gold: #c9a45c;
+  --gold-light: #ead7a7;
+  --brown: #4a3829;
+  --dark: #4a3829;
+  --shadow: rgba(45,30,15,.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top, #fffdf8, #f4ead9);
+
+  color: var(--brown);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+
+/* =========================================================
+   PASSWORD SCREEN
+   ========================================================= */
+
+#passwordScreen {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle, #fffaf1, #d8c29a);
+
+  text-align: center;
+}
+
+.password-box {
+  width: min(420px, 90%);
+
+  padding: 45px 30px;
+
+  background: rgba(255,255,255,.88);
+
+  border: 1px solid var(--gold-light);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.18);
+}
+
+.password-box h1 {
+  font-size: 38px;
+  font-weight: normal;
+
+  margin: 0 0 8px;
+}
+
+.password-box p {
+  color: #8a7356;
+
+  margin-bottom: 28px;
+}
+
+.password-box input {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #d8c5a4;
+
+  outline: none;
+
+  text-align: center;
+
+  font-size: 16px;
+}
+
+.password-box button {
+  margin-top: 15px;
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: 0;
+
+  background: var(--gold);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+}
+
+.password-box button:hover {
+  background: #b89148;
+}
+
+.password-error {
+  color: #a33;
+
+  margin-top: 12px;
+
+  display: none;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.topbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  background:
+    rgba(255,253,248,.94);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom:
+    1px solid #e4d4b8;
+}
+
+.logo {
+  font-size: 20px;
+
+  letter-spacing: 2px;
+}
+
+.controls {
+  display: flex;
+
+  gap: 8px;
+}
+
+.control {
+  border: 1px solid #d6bd8d;
+
+  background: white;
+
+  color: var(--brown);
+
+  padding: 9px 13px;
+
+  cursor: pointer;
+
+  border-radius: 3px;
+}
+
+.control:hover {
+  background: #f8f0df;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+
+  padding:
+    100px 20px 60px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.hero-inner {
+  width: min(1000px, 100%);
+}
+
+.hero-frame {
+  position: relative;
+
+  width: 100%;
+
+  height: min(68vh, 680px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #eee2cc,
+      #d8c5a3
+    );
+
+  border: 10px solid white;
+
+  box-shadow:
+    0 30px 80px var(--shadow);
+
+  overflow: hidden;
+}
+
+.hero-frame img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #9c896b;
+
+  letter-spacing: 4px;
+
+  font-family: Arial, sans-serif;
+}
+
+.hero h1 {
+  font-size:
+    clamp(40px, 8vw, 86px);
+
+  font-weight: normal;
+
+  letter-spacing: 7px;
+
+  margin:
+    35px 0 12px;
+}
+
+.hero .date {
+  font-family: Arial, sans-serif;
+
+  letter-spacing: 5px;
+
+  color: #92784f;
+}
+
+
+/* =========================================================
+   ALBUM SECTIONS
+   ========================================================= */
+
+.album-section {
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 100px 5%;
+}
+
+.section-heading {
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.section-heading h2 {
+  font-size: 44px;
+
+  font-weight: normal;
+
+  margin:
+    0 0 15px;
+}
+
+.ornament {
+  color: var(--gold);
+
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.photo {
+  position: relative;
+
+  min-height: 280px;
+
+  overflow: hidden;
+
+  background: #e8dcc7;
+
+  border: 5px solid white;
+
+  box-shadow:
+    0 10px 30px
+    rgba(70,50,25,.10);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 280px;
+
+  display: block;
+
+  object-fit: cover;
+
+  cursor: pointer;
+
+  transition:
+    transform .6s ease,
+    filter .6s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.06);
+
+  filter: brightness(1.04);
+}
+
+
+/* LARGE PHOTO */
+
+.photo.large {
+  grid-column: span 2;
+
+  grid-row: span 2;
+}
+
+
+/* WIDE PHOTO */
+
+.photo.wide {
+  grid-column: span 2;
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.quote {
+  text-align: center;
+
+  padding: 100px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eee1ca,
+      #fffaf0,
+      #e8d5af
+    );
+}
+
+.quote h2 {
+  font-size:
+    clamp(30px,5vw,55px);
+
+  font-weight: normal;
+
+  font-style: italic;
+}
+
+.quote p {
+  font-family: Arial, sans-serif;
+
+  letter-spacing: 3px;
+
+  color: #8c7049;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 100px 20px;
+
+  background: var(--dark);
+
+  color: white;
+
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 38px;
+
+  font-weight: normal;
+}
+
+footer p {
+  color: #cdbd9e;
+
+  font-family: Arial, sans-serif;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+#lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 5000;
+
+  background:
+    rgba(15,10,7,.96);
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+#lightbox.show {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 95vw;
+
+  max-height: 90vh;
+
+  object-fit: contain;
+
+  box-shadow:
+    0 20px 70px black;
+}
+
+.close {
+  position: absolute;
+
+  top: 20px;
+  right: 30px;
+
+  color: white;
+
+  font-size: 45px;
+
+  cursor: pointer;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width: 700px) {
+
+  .topbar {
+    height: 58px;
+
+    padding: 0 12px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .controls .control {
+    padding: 7px 9px;
+
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .hero-frame {
+    height: 65vh;
+
+    border-width: 6px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+
+    letter-spacing: 3px;
+  }
+
+  .hero .date {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .album-section {
+    padding: 70px 14px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .gallery {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .photo {
+    min-height: 190px;
+
+    border-width: 3px;
+  }
+
+  .photo img {
+    min-height: 190px;
+  }
+
+  .photo.large {
+    grid-column: span 2;
+
+    grid-row: span 2;
+  }
+
+  .photo.wide {
+    grid-column: span 2;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media(max-width: 420px) {
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo.large,
+  .photo.wide {
+    grid-column: span 1;
+
+    grid-row: span 1;
+  }
+
+  .photo {
+    min-height: 280px;
+  }
+
+  .photo img {
+    min-height: 280px;
+  }
+
+  .hero-frame {
+    height: 58vh;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PASSWORD
+     Change 1234 to your desired password.
+     ===================================================== -->
+
+<div id="passwordScreen">
+  <div class="password-box">
+    <h1>Our Engagement</h1>
+    <p> Enter the password to open our album </p>
+    <input
+      id="password"
+      type="password"
+      placeholder="Password">
+    <button onclick="unlock()">
+      OPEN ALBUM
+    </button>
+    <div
+      class="password-error"
+      id="passwordError">
+      Incorrect password
+    </div>
+  </div>
+</div>
+
+
+<!-- =====================================================
+     TOP BAR
+     ===================================================== -->
+
+<div class="topbar">
+
+  <div class="logo">
+    MAHAM &amp; MUZAMMIL
+  </div>
+
+  <div class="controls">
+
+<button id="installBtn" style="display:none;">
+  📲 Install App
+</button>
+
+<script>
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  document.getElementById("installBtn").style.display = "block";
+});
+
+document.getElementById("installBtn").addEventListener("click", async () => {
+  if (!deferredPrompt) return;
+
+  deferredPrompt.prompt();
+
+  const { outcome } = await deferredPrompt.userChoice;
+
+  console.log("Install:", outcome);
+  deferredPrompt = null;
+
+  document.getElementById("installBtn").style.display = "none";
+});
+</script>
+
+    <button
+      class="control"
+      onclick="scrollToTop()"
+      title="Back to top"
+    >
+      ♥
+    </button>
+
+    <button
+      class="control"
+      onclick="toggleMusic()"
+      title="Music"
+    >
+      🎵
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     HERO / COVER PHOTO
+
+     CHANGE cover.jpg TO YOUR COVER PHOTO.
+     ===================================================== -->
+
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-frame">
+      <img
+        src="photos/cover.jpg"
+        alt="Our Engagement">
+    </div>
+    <h1> OUR ENGAGEMENT </h1>
+    <div class="date">
+      MAHAM &amp; MUZAMMIL • 29-AUGUST-2026
+    </div>
+  </div>
+</header>
+
+<!-- =====================================================
+        Event Highlights
+     ===================================================== -->
+
+<section class="album-section" id="getting-ready">
+<div class="section-heading">
+<h2> Event Highlights </h2>
+<div class="ornament"> ✦ ✦ ✦ </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/highlights/1.jpg"></div>
+<div class="photo"><img src="photos/highlights/2.jpg"></div>
+<div class="photo"><img src="photos/highlights/3.jpg"></div>
+<div class="photo"><img src="photos/highlights/4.jpg"></div>
+<div class="photo"><img src="photos/highlights/5.jpg"></div>
+<div class="photo"><img src="photos/highlights/6.jpg"></div>
+<div class="photo"><img src="photos/highlights/7.jpg"></div>
+<div class="photo"><img src="photos/highlights/8.jpg"></div>
+<div class="photo"><img src="photos/highlights/9.jpg"></div>
+</div>
+</section>
+
+
+<!-- =====================================================
+     Bride’s Ceremony — Maham
+     ===================================================== -->
+
+<section class="album-section" id="ring">
+<div class="section-heading">
+<h2>  Bride’s Ceremony — Maham </h2>
+<div class="ornament"> ✦ ✦ ✦ </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/Maham's Cermony/1.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/2.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/3.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/4.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/5.jpg"></div>
+<div class="photo large"><img src="photos/Maham's Cermony/6.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/7.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/8.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/9.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/10.jpg"></div>
+<div class="photo large"><img src="photos/Maham's Cermony/11.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/12.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/13.jpg"></div>
+<div class="photo large"><img src="photos/Maham's Cermony/14.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/15.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/16.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/17.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/18.jpg"></div>
+<div class="photo large"><img src="photos/Maham's Cermony/19.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/20.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/21.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/22.jpg"></div>
+<div class="photo"><img src="photos/Maham's Cermony/23.jpg"></div>
+</div>
+</section>
+
+<!-- =====================================================
+     Groom’s Ceremony — Muzammil
+     ===================================================== -->
+
+<section class="album-section" id="ring">
+<div class="section-heading">
+<h2> Groom’s Ceremony — Muzammil</h2>
+<div class="ornament"> ✦ ✦ ✦ </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/Muzammil's Cermony/1.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/2.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/3.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/4.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/5.jpg"></div>
+<div class="photo large"><img src="photos/Muzammil's Cermony/6.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/7.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/8.jpg"></div>
+<div class="photo large"><img src="photos/Muzammil's Cermony/9.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/10.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/11.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/12.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/13.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/14.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/15.jpg"></div>
+<div class="photo large"><img src="photos/Muzammil's Cermony/16.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/17.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/18.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/19.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/20.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/21.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/22.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/23.jpg"></div>
+<div class="photo"><img src="photos/Muzammil's Cermony/24.jpg"></div>
+</div>
+</section>
+
+
+
+
+
+<!-- =====================================================
+     Groom’s Portraits
+     ===================================================== -->
+
+<section class="album-section" id="muzammil">
+<div class="section-heading">
+<h2> Groom’s Portraits — Muzammil</h2>
+<div class="ornament"> ✦ ✦ ✦ </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/Muzammil/1.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/2.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/3.jpg"></div>
+<div class="photo large"><img src="photos/Muzammil/4.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/5.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/6.jpg"></div>
+<div class="photo large"><img src="photos/Muzammil/7.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/8.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/9.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/10.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/11.jpg"></div>
+<div class="photo"><img src="photos/Muzammil/12.jpg"></div>
+</div>
+</section>
+
+
+<!-- =====================================================
+        Bride’s Portraits
+     ===================================================== -->
+
+<section class="album-section" id="muzammil">
+<div class="section-heading">
+<h2> Bride’s Portraits — Maham </h2>
+<div class="ornament"> ✦ ✦ ✦ </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/Maham/1.jpg"></div>
+<div class="photo"><img src="photos/Maham/2.jpg"></div>
+<div class="photo"><img src="photos/Maham/3.jpg"></div>
+<div class="photo large"><img src="photos/Maham/4.jpg"></div>
+<div class="photo"><img src="photos/Maham/5.jpg"></div>
+<div class="photo"><img src="photos/Maham/6.jpg"></div>
+<div class="photo"><img src="photos/Maham/7.jpg"></div>
+<div class="photo"><img src="photos/Maham/8.jpg"></div>
+<div class="photo large"><img src="photos/Maham/9.jpg"></div>
+<div class="photo"><img src="photos/Maham/10.jpg"></div>
+<div class="photo"><img src="photos/Maham/11.jpg"></div>
+<div class="photo"><img src="photos/Maham/12.jpg"></div>
+<div class="photo"><img src="photos/Maham/13.jpg"></div>
+<div class="photo large"><img src="photos/Maham/14.jpg"></div>
+<div class="photo"><img src="photos/Maham/15.jpg"></div>
+<div class="photo"><img src="photos/Maham/16.jpg"></div>
+<div class="photo large"><img src="photos/Maham/17.jpg"></div>
+<div class="photo"><img src="photos/Maham/18.jpg"></div>
+<div class="photo"><img src="photos/Maham/19.jpg"></div>
+<div class="photo"><img src="photos/Maham/20.jpg"></div>
+<div class="photo"><img src="photos/Maham/21.jpg"></div>
+<div class="photo"><img src="photos/Maham/22.jpg"></div>
+</div>
+</section>
+
+<!-- =====================================================
+     FAMILY
+     ===================================================== -->
+
+<section class="album-section" id="family">
+<div class="section-heading">
+<h2> Our Families </h2>
+<div class="ornament"> ✦ ✦ ✦ </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/family/1.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/2.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/3.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/4.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/5.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/6.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/7.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/8.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/9.jpg" alt="Our Families"></div>
+<div class="photo wide"><img src="photos/family/10.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/11.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/12.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/13.jpg" alt="Our Families"></div>
+<div class="photo"><img src="photos/family/14.jpg" alt="Our Families"></div>
+</div>
+</section>
+
+<!-- =====================================================
+     CANDID MOMENTS
+     ===================================================== -->
+
+<section class="album-section" id="candid">
+<div class="section-heading">
+<h2> Candid Moments </h2>
+<div class="ornament"> ♡ ♡ ♡ </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/candid/1.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/2.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/3.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/4.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/5.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/6.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/7.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/8.jpg" alt="Candid Moment" ></div>
+<div class="photo"><img src="photos/candid/9.jpg" alt="Candid Moment" ></div>
+</div>
+</section>
+
+
+<!-- =====================================================
+     QUOTE
+     ===================================================== -->
+
+<div class="quote">
+<h2> “The beginning of our forever.” </h2>
+<p> OUR ENGAGEMENT </p>
+</div>
+
+<!-- =====================================================
+     FAVORITES
+     ===================================================== -->
+
+<section class="album-section" id="favorites">
+<div class="section-heading">
+<h2> Our Favorite Moments </h2>
+<div class="ornament"> ♥ ♥ ♥  </div></div>
+<div class="gallery">
+<div class="photo large"><img src="photos/gift/1.png" alt="Our Favorite Moment" ></div>
+<div class="photo"><img src="photos/gift/2.png" alt="Our Favorite Moment" ></div>
+<div class="photo"><img src="photos/gift/3.jpg" alt="Our Favorite Moment" ></div>
+<div class="photo wide"><img src="photos/gift/4.jpg" alt="Our Favorite Moment" ></div>
+<div class="photo"><img src="photos/gift/5.jpg" alt="Our Favorite Moment" ></div>
+<div class="photo"><img src="photos/gift/6.png" alt="Our Favorite Moment" ></div>
+<div class="photo"><img src="photos/gift/7.png" alt="Our Favorite Moment" ></div>
+<div class="photo"><img src="photos/gift/8.jpg" alt="Our Favorite Moment" ></div>
+</div>
+</section>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+<h2> The Beginning of Forever </h2>
+<p> MAHAM &amp; MUZAMMIL • ENGAGED • 29-AUGUST-2026 </p>
+</footer>
+
+<!-- =====================================================
+     LIGHTBOX
+     ===================================================== -->
+
+<div id="lightbox">
+
+  <div
+    class="close"
+    onclick="closeLightbox()"
+  >
+    ×
+  </div>
+
+  <img
+    id="lightboxImage"
+    src=""
+    alt=""
+  >
+
+</div>
+
+
+<!-- =====================================================
+     MUSIC
+
+     Put your music file beside index.html:
+
+     music.mp3
+     ===================================================== -->
+
+<audio id="music" loop>
+
+  <source
+    src="music.mp3"
+    type="audio/mpeg"
+  >
+
+</audio>
+
+
+<script>
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+
+const ALBUM_PASSWORD = "29082026";
+
+
+function unlock() {
+
+  const entered =
+    document.getElementById("password").value;
+
+  const error =
+    document.getElementById("passwordError");
+
+
+  if (entered === ALBUM_PASSWORD) {
+
+    document.getElementById(
+      "passwordScreen"
+    ).style.display = "none";
+
+  } else {
+
+    error.style.display = "block";
+
+  }
+
+}
+
+
+/* Enter key */
+
+document
+  .getElementById("password")
+  .addEventListener(
+    "keydown",
+    function(e) {
+
+      if (e.key === "Enter") {
+
+        unlock();
+
+      }
+
+    }
+  );
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+function openLightbox(url) {
+
+  const box =
+    document.getElementById("lightbox");
+
+  const img =
+    document.getElementById("lightboxImage");
+
+
+  img.src = url;
+
+  box.classList.add("show");
+
+}
+
+
+function closeLightbox() {
+
+  document
+    .getElementById("lightbox")
+    .classList.remove("show");
+
+}
+
+
+/* Clicking outside image closes it */
+
+document
+  .getElementById("lightbox")
+  .addEventListener(
+    "click",
+    function(e) {
+
+      if (e.target === this) {
+
+        closeLightbox();}});
+
+/* Escape closes lightbox */
+
+document.addEventListener(
+  "keydown",
+  function(e) {
+
+    if (e.key === "Escape") {
+
+      closeLightbox();}});
+
+
+/* =========================================================
+   MAKE ALL ALBUM PHOTOS CLICKABLE
+   ========================================================= */
+
+document
+  .querySelectorAll(".photo img")
+  .forEach(function(img) {
+
+    img.addEventListener(
+      "click",
+      function() {
+
+        openLightbox(this.src);
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   MUSIC
+   ========================================================= */
+
+let musicPlaying = false;
+
+
+function toggleMusic() {
+
+  const music =
+    document.getElementById("music");
+
+
+  if (musicPlaying) {
+
+    music.pause();
+
+    musicPlaying = false;
+
+  } else {
+
+    music.play()
+      .then(function() {
+
+        musicPlaying = true;
+
+      })
+      .catch(function() {
+
+        alert(
+          "Put a file named music.mp3 beside index.html."
+        );
+
+      });
+
+  }
+
+}
+
+
+/* =========================================================
+   SCROLL TO TOP
+   ========================================================= */
+
+function scrollToTop() {
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: "smooth"
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
